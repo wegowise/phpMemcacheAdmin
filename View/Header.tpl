@@ -32,28 +32,6 @@ if(basename($_SERVER['PHP_SELF']) == 'index.php')
 }
 # Server HTML select
 echo Library_HTML_Components::serverSelect('server_select', (isset($_GET['server'])) ? $_GET['server'] : '', 'list', 'onchange="changeServer(this)"'); ?>
-        |
-<?php
-# Commands view
-if(basename($_SERVER['PHP_SELF']) == 'commands.php')
-{ ?>
-        Executing Commands on Servers
-<?php
-} else { ?>
-        <a href="commands.php">Execute Commands on Servers</a>
-<?php
-}?>
-        |
-<?php
-# Configure view
-if(basename($_SERVER['PHP_SELF']) == 'configure.php')
-{ ?>
-        Editing Configuration
-<?php
-} else { ?>
-        <a href="configure.php">Edit Configuration</a>
-<?php
-} ?>
     </div>
 
 <!--[if IE]>
